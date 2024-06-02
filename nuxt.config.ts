@@ -2,6 +2,8 @@
 export default defineNuxtConfig({
   ssr: true,
   app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/JJWEB_NUXT/' : '/',
+    buildAssetsDir: '/static/',
     head: {
       charset: 'utf-8',
       title: '捷匠專業汽車美容 | 淡水旗艦店',
