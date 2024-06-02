@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     "vue3-carousel-nuxt",
     "@nuxt/image",
-    "@nuxtjs/sitemap"
+    // "@nuxtjs/sitemap"
   ],
 
   nitro: {
