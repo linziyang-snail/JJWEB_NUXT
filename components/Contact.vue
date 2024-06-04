@@ -14,10 +14,24 @@
                   </p>
                 </div>
                 <div class="contact-number">
-                  <a v-for="(number, index) in office.contactNumbers" :key="index" :href="`tel:${number}`" itemprop="telephone">{{ number }}</a>
+                  <a 
+                    v-for="(number, index) in office.contactNumbers" 
+                    :key="index" 
+                    :href="`tel:${number}`" 
+                    itemprop="telephone"
+                    :aria-label="`聯繫電話: ${number}`"
+                  >
+                    {{ number }}
+                  </a>
                 </div>
                 <div class="email-address">
-                  <a :href="`mailto:${office.emailAddress}`" itemprop="email">{{ office.emailAddress }}</a>
+                  <a 
+                    :href="`mailto:${office.emailAddress}`" 
+                    itemprop="email"
+                    :aria-label="`聯繫電子郵件: ${office.emailAddress}`"
+                  >
+                    {{ office.emailAddress }}
+                  </a>
                 </div>
               </div>
             </div>
@@ -27,7 +41,12 @@
                 <div class="social-links">
                   <ul class="list-unstyled d-flex gap-3 mt3">
                     <li v-for="(link, index) in socialLinks" :key="index">
-                      <a :href="link.url" class="text-secondary me-3 p-0" target="_blank">
+                      <a 
+                        :href="link.url" 
+                        class="text-secondary me-3 p-0" 
+                        target="_blank"
+                        :aria-label="`前往${link.icon}連結`"
+                      >
                         <Icon :name="link.icon" class="social-icon"></Icon>
                       </a>
                     </li>

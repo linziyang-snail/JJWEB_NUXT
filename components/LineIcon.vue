@@ -3,6 +3,7 @@
         class="nav-link d-flex align-items-center px-3"
         href="https://line.me/R/ti/p/@639xmqad"
         target="_blank"
+        aria-label="前往Line連結"
     >
         <Icon
             name="ri:line-fill"

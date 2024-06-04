@@ -8,7 +8,7 @@
                                                 src="/logo/logo-footer.png" 
                                                 alt="捷匠專業汽車美容footer LOGO"
                                                 class="img-fluid"
-
+                                                format="webp"
                                         />
                                 </div>
                                 <div class="col-12 col-md-4 text-center padding-medium border-end-md">
@@ -16,7 +16,12 @@
                                         <p class="mb-2" v-for="time in operationHours.times" :key="time">{{ time }}</p>
                                         <br>
                                         <div>
-                                                <a v-for="social in socialLinks" :key="social.name" :href="social.url" target="_blank">
+                                                <a 
+                                                        v-for="social in socialLinks" :key="social.name" 
+                                                        :href="social.url" 
+                                                        target="_blank"
+                                                        :aria-label="`前往${social.url}連結`"
+                                                >
                                                         <Icon :name="social.icon" class="social-icon m-2" style="font-size: 24px"></Icon>
                                                 </a>
                                         </div>
@@ -24,14 +29,24 @@
                                 <div class="col-12 col-md-4 text-center padding-medium mb-4 mb-md-0">
                                         <p class="header-top mb-4">{{ contactInfo.title1 }}</p>
                                         <address class="mb-2">
-                                        <a :href="googleMapLinks.link1" target="_blank" rel="noopener noreferrer">
+                                        <a 
+                                                :href="googleMapLinks.link1" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                :aria-label="`前往${googleMapLinks.link1}連結`"
+                                        >
                                                 {{ contactInfo.address1 }}
                                         </a>
                                         </address>
                                         <br>
                                         <p class="header-top mb-4">{{ contactInfo.title2 }}</p>
                                         <address class="mb-2">
-                                        <a :href="googleMapLinks.link2" target="_blank" rel="noopener noreferrer">
+                                        <a 
+                                                :href="googleMapLinks.link2" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                :aria-label="`前往${googleMapLinks.link2}連結`"
+                                        >
                                                 {{ contactInfo.address2 }}
                                         </a>
                                         </address>
@@ -61,7 +76,7 @@
         title: '營業時間',
         times: [
                 '星期一 公休',
-                '週二至週日 11 am - 7 pm'
+                '週二至週日 11 am - 9 pm'
         ],
         });
 

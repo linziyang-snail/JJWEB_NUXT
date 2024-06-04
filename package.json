@@ -11,15 +11,21 @@
     "deploy": "gh-pages -d .output/public --dotfiles -f"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@googlemaps/js-api-loader": "^1.16.6",
     "@nuxt/image": "^1.7.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/pwa": "^3.1.2",
     "@nuxtjs/sitemap": "^5.2.0",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "nuxt": "^3.11.2",
     "nuxt-lazy-load": "^3.0.4",
     "nuxt-mail": "^5.0.1",
     "nuxt-swiper": "^1.2.2",
     "vue": "^3.4.21",
     "vue-lazyload": "^3.0.0",
+    "vue-router": "^4.3.2",
     "vue3-carousel-nuxt": "^1.1.1"
   },
   "devDependencies": {
@@ -28,6 +34,7 @@
     "nuxt-aos": "^1.2.4",
     "nuxt-icon": "^0.6.10",
     "nuxt-og-image": "^3.0.0-rc.53",
+    "nuxt-simple-sitemap": "^4.4.1",
     "sass": "^1.77.0"
   }
 }

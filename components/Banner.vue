@@ -1,5 +1,15 @@
 <template>
-  <section id="hero" :style="{ backgroundImage: 'url(' + bannerImage + ')' }">
+    <section id="hero">
+        <NuxtImg
+        :src=bannerImage
+        class="hero-image"
+        alt="Banner Image"
+        format="webp"
+        layout="responsive"
+        width="1920"
+        height="1080"
+        quality="80"
+      />
     <div class="container py-5">
       <div class="row py-5">
         <div
@@ -12,6 +22,7 @@
               v-for="(item, index) in breadcrumbItems"
               :key="index"
               :to="item.path"
+              prefetch
               >{{ item.text }}
             </NuxtLink
             >
@@ -25,11 +36,6 @@
 <script setup>
 import { computed } from "vue";
 import { useRoute } from "vue-router";
-
-import aboutBannerImage from "../assets/banner/banner-about.jpg";
-import servicesBannerImage from "../assets/banner/banner-service.jpg";
-import projectBannerImage from "../assets/banner/banner-project.jpg";
-import contactBannerImage from "../assets/banner/banner-contact.jpg";
 
 const route = useRoute();
 
@@ -51,13 +57,13 @@ const title = computed(() => {
 const bannerImage = computed(() => {
   switch (route.path) {
     case "/about":
-      return aboutBannerImage;
+      return "/banner/banner-about.jpg";
     case "/services":
-      return servicesBannerImage;
+      return "/banner/banner-service.jpg";
     case "/project":
-      return projectBannerImage;
+      return "/banner/banner-project.jpg";
     case "/contact":
-      return contactBannerImage;
+      return "/banner/banner-contact.jpg";
     default:
       return "";
   }
@@ -91,16 +97,13 @@ const breadcrumbItems = computed(() => {
 });
 </script>
 
-
 <style scoped>
 #hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    position: relative;
-    background-size: cover;
-    background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
 #hero::before {
@@ -113,18 +116,35 @@ const breadcrumbItems = computed(() => {
     background-color: rgba(0, 0, 0, 0.4); 
 }
 
-.container {
-    position: relative;
-    z-index: 1;
-    text-align: center; 
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
 
 .col-md-6.offset-md-3 {
-    margin: 0;
-    flex: 0 0 100%;
-    max-width: 100%;
+  margin: 0;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
-
-
 </style>

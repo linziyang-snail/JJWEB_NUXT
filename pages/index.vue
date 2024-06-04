@@ -3,7 +3,7 @@
         <div data-aos="fade-up">
             <HomeComponentsHero />
         </div>
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div id="about-section" data-aos="fade-up" data-aos-delay="100">
             <HomeComponentsAbout />
         </div>
         <div data-aos="fade-up" data-aos-delay="200">
@@ -43,7 +43,7 @@ useHead({
     },
     {
         property: 'og:image',
-        content: 'http://localhost:3000/og-logo.png',
+        content: 'https://jiejiang.com.tw/og-logo.png',
     },
     {
         property: 'og:type',
@@ -51,7 +51,7 @@ useHead({
     },
     {
         property: 'og:url',
-        content: 'http://localhost:3000',
+        content: 'https://jiejiang.com.tw/',
     },
     {
         name: 'twitter:card',
@@ -67,8 +67,14 @@ useHead({
     },
     {
         name: 'twitter:image',
-        content: 'http://localhost:3000/og-logo.png',
+        content: 'https://jiejiang.com.tw/og-logo.png',
     },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://jiejiang.com.tw/'
+    }
   ],
 })
 </script>

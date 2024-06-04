@@ -20,13 +20,17 @@
                 <div class="row">
                     <div v-for="item in filteredItems" :key="item.id" 
                          class="item position-relative overflow-hidden col-lg-4 col-md-6 col-12" :class="item.class">
-                        <a href="#" :title="item.title" class="image-link">
+                        <a href="#" :title="item.title" class="image-link" :aria-label="`${item.alt}`">
                             <div class="image-container">
                                 <NuxtImg 
                                     class="portfolio-img img-fluid p-3" 
                                     :src="item.src" 
                                     :alt="item.alt" 
-                                    loading="lazy"
+                                    format="webp"
+                                    quality="50"
+                                    layout="responsive"
+                                    width="1280"
+                                    height="720"
                                 />
                                 <div class="description position-absolute top-50 start-50 translate-middle text-center p-3">
                                 <p class="text-white">{{ item.description }}</p>

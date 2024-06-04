@@ -5,18 +5,18 @@
           <div class="product text-center">
             <div class="position-relative mb-3">
               <div class="badge text-white bg-"></div>
-              <a class="d-block" :href="product.link">
+              <a class="d-block" :href="product.link" :aria-label="`前往${product.link}`">
                 <img class="img-fluid w-100" :src="product.image" :alt="product.name">
               </a>
               <div class="product-overlay">
                 <ul class="mb-0 list-inline">
                   <li class="list-inline-item m-0 p-0">
-                    <a class="btn btn-sm btn-towa-blue-product" href="#">前往購買</a>
+                    <a class="btn btn-sm btn-towa-blue-product" href="#" aria-label="前往購買">前往購買</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <h6><a class="reset-anchor" :href="product.link">{{ product.name }}</a></h6>
+            <h6><a class="reset-anchor" :href="product.link" :aria-label="`前往${product.link}`">{{ product.name }}</a></h6>
             <p class="small text-muted">${{ product.price }}</p>
           </div>
         </div>

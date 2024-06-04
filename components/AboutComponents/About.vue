@@ -6,7 +6,12 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-md-6">
                             <div class="image-holder">
-                                <NuxtImg src="/about/about2.jpeg" alt="捷匠汽車美容 - 關於我們" class="img-fluid" />
+                                <NuxtImg 
+                                    src="/about/about2.jpeg" 
+                                    alt="捷匠汽車美容 - 關於我們" 
+                                    class="img-fluid" 
+                                    format="webp"
+                                />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -32,7 +37,12 @@
                         </div>
                         <div class="col-md-6">
                             <div class="image-holder text-right">
-                                <NuxtImg src="/about/about1.jpeg" alt="捷匠汽車美容 - 關於我們" class="img-fluid" />
+                                <NuxtImg 
+                                    src="/about/about1.jpeg" 
+                                    alt="捷匠汽車美容 - 關於我們" 
+                                    class="img-fluid" 
+                                    format="webp"
+                                />
                             </div>
                         </div>
                     </div>

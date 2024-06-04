@@ -9,7 +9,7 @@
                 <div class="col-12">
                     <h1 class="hero-heading display-3 mb-4 text-white">NEW IN FOR 2024</h1>
                     <p class="text-shadow mb-5">Check Out What's Just Dropped</p>
-                    <a class="btn btn-lg btn-towa-blue" href="#">OUT NOW</a>
+                    <a class="btn btn-lg btn-towa-blue" href="#" aria-label="離開頁面">OUT NOW</a>
                 </div>
             </div>
         </div>

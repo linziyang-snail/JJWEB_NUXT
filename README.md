@@ -22,7 +22,7 @@ bun install
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on `https://jiejiang.com.tw/`:
 
 ```bash
 # npm
@@ -73,4 +73,5 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
 # JJWEB_NUXT

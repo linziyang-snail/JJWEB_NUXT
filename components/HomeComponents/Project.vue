@@ -15,8 +15,11 @@
             <NuxtImg 
               class="img-fluid block w-100" 
               :src="item.imgSrc" 
-              :alt="item.description" 
-              loading="lazy"
+              :alt="item.description"
+              format="webp"
+              layout="responsive"
+              width="1280"
+              height="720"
             />
             <div class="carousel-caption d-none d-md-block">
               <h4 class="text-white">{{ item.description }}</h4>

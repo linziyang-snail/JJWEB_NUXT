@@ -1,62 +1,67 @@
 <template>
-    <section id="price" class="my-5">
-      <div style="overflow: hidden;">
-        <div class="container py-5" data-aos="zoom-out">
-          <p class="header-top">Auto Detailing</p>
-          <h2 class="display-4 mb-5">JIEJIANG packages</h2>
-          <ul class="nav nav-tabs my-3" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation" v-for="(pkg, index) in packages" :key="pkg.id">
-                <button
-                    class="nav-link me-4 px-4 py-1 mb-2"
-                    :class="{ active: index === 0 }"
-                    :id="`${pkg.id}-tab`"
-                    data-bs-toggle="tab"
-                    :data-bs-target="`#${pkg.id}`"
-                    type="button"
-                    role="tab"
-                    :aria-controls="pkg.id"
-                    :aria-selected="index === 0 ? 'true' : 'false'"
-                    >
-                    {{ pkg.name }}
-                </button>
-            </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div 
-                v-for="(pkg, index) in packages" 
-                :key="pkg.id" 
-                :class="['tab-pane fade', { 'show active': index === 0 }]" 
-                :id="pkg.id"
-                role="tabpanel" 
-                :aria-labelledby="`${pkg.id}-tab`" 
-                tabindex="0"
+  <section id="price" class="my-5">
+    <div style="overflow: hidden;">
+      <div class="container py-5" data-aos="zoom-out">
+        <p class="header-top">Auto Detailing</p>
+        <h2 class="display-4 mb-5">JIEJIANG packages</h2>
+        <ul class="nav nav-tabs my-3 justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation" v-for="(pkg, index) in packages" :key="pkg.id">
+            <button
+              class="nav-link me-4 px-4 py-1 mb-2"
+              :class="{ active: index === 0 }"
+              :id="`${pkg.id}-tab`"
+              data-bs-toggle="tab"
+              :data-bs-target="`#${pkg.id}`"
+              type="button"
+              role="tab"
+              :aria-controls="pkg.id"
+              :aria-selected="index === 0 ? 'true' : 'false'"
             >
-                <div class="row py-4 d-flex">
-                    <div class="col-lg-3 pb-4 flex" v-for="(plan, planIndex) in pkg.plans" :key="`${pkg.id}-${planIndex}`">
-                    <div class="py-5 plan-post text-center h-100">
-                        <h3 class="header-top">{{ plan.title }}</h3>
-                        <h4 class="mb-5 display text-wrap">
-                            <span v-html="processPrice(plan.price)"></span>
-                        </h4>
-                        <div class="price-option">
-                        <p 
-                            v-for="(feature, featureIndex) in plan.features" 
-                            :key="`${pkg.id}-${planIndex}-${featureIndex}`"
-                        >
-                            <span class="price-tick">✓</span> {{ feature }}
-                        </p>
-                        </div>
-                        <a href="https://line.me/R/ti/p/@639xmqad" target="_blank" class="btn btn-primary mt-auto px-4 py-3 mx-2">立即預約<Icon name="tabler:arrow-right" class="arrow-icon"></Icon></a>
-                    </div>
-                    </div>
+              {{ pkg.name }}
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            v-for="(pkg, index) in packages"
+            :key="pkg.id"
+            :class="['tab-pane fade', { 'show active': index === 0 }]"
+            :id="pkg.id"
+            role="tabpanel"
+            :aria-labelledby="`${pkg.id}-tab`"
+            tabindex="0"
+          >
+            <div class="row py-4 d-flex">
+              <div class="col-lg-3 pb-4 flex" v-for="(plan, planIndex) in pkg.plans" :key="`${pkg.id}-${planIndex}`">
+                <div class="py-5 plan-post text-center h-100">
+                  <h3 class="header-top">{{ plan.title }}</h3>
+                  <h4 class="mb-5 display text-wrap">
+                    <span v-html="processPrice(plan.price)"></span>
+                  </h4>
+                  <div class="price-option">
+                    <p
+                      v-for="(feature, featureIndex) in plan.features"
+                      :key="`${pkg.id}-${planIndex}-${featureIndex}`"
+                    >
+                      <span class="price-tick">✓</span> {{ feature }}
+                    </p>
+                  </div>
+                  <a 
+                    href="https://line.me/R/ti/p/@639xmqad" 
+                    target="_blank" 
+                    class="btn btn-primary mt-auto px-4 py-3 mx-2"
+                    aria-label="前往line連結"
+                    >
+                    立即預約<Icon name="tabler:arrow-right" class="arrow-icon"></Icon></a>
                 </div>
-             </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-  </template>
-
+    </div>
+  </section>
+</template>
 
 <script setup>
 import { ref } from 'vue';

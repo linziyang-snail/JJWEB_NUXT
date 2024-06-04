@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar fixed-top navbar-expand-lg container-fluid p-4">
       <div class="container-fluid">
-        <NuxtLink class="navbar-brand" to="/">
+        <NuxtLink class="navbar-brand" to="/" prefetch>
           <img src="@/assets/logo/JIEJIANG_Logo.png" alt="捷匠專業汽車美容LOGO" style="height: 3.5rem" />
         </NuxtLink>
         <button
@@ -37,6 +37,7 @@
                   class="nav-link text-white text-uppercase mx-2 px-3 mb-2 mb-lg-0 d-flex align-items-center"
                   :class="{ 'highlight': link.name === '商品總覽' }"
                   :to="link.path"
+                  prefetch
                   active-class="active"
                   @click="handleLinkClick"
                 >
@@ -54,6 +55,7 @@
                     class="nav-link d-flex align-items-center px-3"
                     :href="social.url"
                     target="_blank"
+                    :aria-label="`前往${social.url}連結`"
                   >
                     <Icon :name="social.icon" class="social-icon text-white" style="font-size: 20px;"></Icon>
                   </a>
