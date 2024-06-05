@@ -11,6 +11,7 @@
                                     alt="捷匠汽車美容 - 關於我們" 
                                     class="img-fluid" 
                                     format="webp"
+                                    placeholder
                                 />
                             </div>
                         </div>

@@ -1,7 +1,8 @@
 <template>
     <section id="hero">
         <NuxtImg
-        src="/banner/banner-home.jpg"
+        :placeholder="50"
+        src="/banner/banner-home.jpg" 
         class="hero-image"
         alt="Banner Image"
         format="webp"

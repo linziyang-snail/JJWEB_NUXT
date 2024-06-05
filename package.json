@@ -21,7 +21,6 @@
     "bootstrap-icons": "^1.11.3",
     "nuxt": "^3.11.2",
     "nuxt-lazy-load": "^3.0.4",
-    "nuxt-mail": "^5.0.1",
     "nuxt-swiper": "^1.2.2",
     "vue": "^3.4.21",
     "vue-lazyload": "^3.0.0",

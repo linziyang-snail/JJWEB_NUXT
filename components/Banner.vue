@@ -1,14 +1,16 @@
 <template>
     <section id="hero">
         <NuxtImg
-        :src=bannerImage
+        preload
+        :placeholder="50"
+        :src=bannerImage 
         class="hero-image"
         alt="Banner Image"
         format="webp"
         layout="responsive"
         width="1920"
         height="1080"
-        quality="80"
+        quality="50"
       />
     <div class="container py-5">
       <div class="row py-5">

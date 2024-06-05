@@ -1,12 +1,5 @@
 <template>
-    <div>
-      <client-only>
-        <NavBar />
-      </client-only>
-      <main>
+      <NewNavBar />
        <slot />
-       <LineIcon />
-      </main>
       <Footer />
-    </div>
   </template>
