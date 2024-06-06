@@ -1,30 +1,28 @@
-name: Deploy Nuxt 3 to GitHub Pages
+name: Deploy Nuxt App to GitHub Pages
 
 on:
     push:
         branches:
-            - main
+            - main # 根据您的主分支名称进行调整
 
 jobs:
-    build-deploy:
+    build-and-deploy:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout the repository
+            - name: Checkout repository
               uses: actions/checkout@v2
 
             - name: Setup Node.js
               uses: actions/setup-node@v2
               with:
-                  node-version: '16'
+                  node-version: '16' # 根据需要调整 Node.js 版本
 
             - name: Install dependencies
               run: npm install
 
-            - name: Build the project
+            - name: Build project
               run: npm run generate
 
             - name: Deploy to GitHub Pages
               run: npm run deploy
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

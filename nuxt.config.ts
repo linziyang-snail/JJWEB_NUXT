@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/' : '/',
-    buildAssetsDir: '/static/',
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/',
     head: {
       charset: 'utf-8',
       title: 'JieJiang | 捷匠專業汽車美容 - 只提供最頂級汽車美容服務',
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'JieJiang | 捷匠專業汽車美容 - 只提供最頂級汽車美容服務' },
         { property: 'og:description', content: '捷匠專業汽車美容成立於2015年，在淡水、竹圍和北投三地設有分店，致力於提供頂級的汽車護理和美容服務。無論是二輪或四輪車輛，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、竹圍還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://jiejiang.com.tw/' },
+        { property: 'og:url', content: 'https://jiejiang.com.tw' },
         { property: 'og:image', content: 'https://jiejiang.com.tw/og-logo.png' },
         { property: 'og:site_name', content: '捷匠專業汽車美容' },
   
@@ -46,7 +46,7 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/Swiper/10.3.1/swiper-bundle.min.css' },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Oswald:wght@500;600;700&display=swap' },
-        { rel: 'canonical', href: 'https://jiejiang.com.tw/' }
+        { rel: 'canonical', href: 'https://jiejiang.com.tw' }
       ],
       htmlAttrs: {
         lang: 'zh-Hant'
@@ -76,7 +76,7 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
   ],
   site: {
-    url: 'https://jiejiang.com.tw/',
+    url: 'https://jiejiang.com.tw',
   },
   nitro: {
     logLevel: 3,
@@ -121,4 +121,16 @@ export default defineNuxtConfig({
     assetsInclude: ['**/*.JPG']
   },
   devtools: { enabled: true },
+  sitemap: {
+    hostname: 'https://jiejiang.com.tw',
+    gzip: true,
+    trailingSlash: false,
+    routes: [
+      '/',
+      '/about',
+      '/contact',
+      '/project',
+      '/services'
+    ]
+  },
 })
