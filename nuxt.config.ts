@@ -121,16 +121,16 @@ export default defineNuxtConfig({
     assetsInclude: ['**/*.JPG']
   },
   devtools: { enabled: true },
-  sitemap: {
-    hostname: 'https://jiejiang.com.tw',
-    gzip: true,
-    trailingSlash: false,
-    routes: [
-      '/',
-      '/about',
-      '/contact',
-      '/project',
-      '/services'
-    ]
-  },
+  // sitemap: {
+  //   hostname: 'https://jiejiang.com.tw',
+  //   gzip: true,
+  //   trailingSlash: false,
+  //   routes: [
+  //     '/',
+  //     '/about',
+  //     '/contact',
+  //     '/project',
+  //     '/services'
+  //   ]
+  // },
 })
