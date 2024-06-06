@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     baseURL: '/',
-    buildAssetsDir: '/_nuxt/',
+    // buildAssetsDir: '/_nuxt/',
     head: {
       charset: 'utf-8',
       title: 'JieJiang | 捷匠專業汽車美容 - 只提供最頂級汽車美容服務',
@@ -121,16 +121,16 @@ export default defineNuxtConfig({
     assetsInclude: ['**/*.JPG']
   },
   devtools: { enabled: true },
-  // sitemap: {
-  //   hostname: 'https://jiejiang.com.tw',
-  //   gzip: true,
-  //   trailingSlash: false,
-  //   routes: [
-  //     '/',
-  //     '/about',
-  //     '/contact',
-  //     '/project',
-  //     '/services'
-  //   ]
-  // },
+  sitemap: {
+    hostname: 'https://jiejiang.com.tw',
+    gzip: true,
+    trailingSlash: false,
+    routes: [
+      '/',
+      '/about',
+      '/contact',
+      '/project',
+      '/services'
+    ]
+  },
 })
