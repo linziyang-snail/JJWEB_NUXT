@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     baseURL: '/',
-    // buildAssetsDir: '/_nuxt/',
+    buildAssetsDir: '/static/',
     head: {
       charset: 'utf-8',
       title: 'JieJiang | 捷匠專業汽車美容 - 只提供最頂級汽車美容服務',
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         { property: 'linkedin:title', content: 'JieJiang | 捷匠專業汽車美容 - 只提供最頂級汽車美容服務' },
         { property: 'linkedin:description', content: '捷匠專業汽車美容成立於2015年，在淡水、竹圍和北投三地設有分店，致力於提供頂級的汽車護理和美容服務。無論是二輪或四輪車輛，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、竹圍還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
         { property: 'linkedin:image', content: 'https://jiejiang.com.tw/og-logo.png' }
-      ],
+      ],  
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
@@ -54,7 +54,7 @@ export default defineNuxtConfig({
     }
   },
   css: [
-    'bootstrap/scss/bootstrap.scss',
+    'bootstrap/dist/css/bootstrap.min.css',
     '~/assets/css/style.css'
   ],
   components: [
@@ -121,16 +121,4 @@ export default defineNuxtConfig({
     assetsInclude: ['**/*.JPG']
   },
   devtools: { enabled: true },
-  sitemap: {
-    hostname: 'https://jiejiang.com.tw',
-    gzip: true,
-    trailingSlash: false,
-    routes: [
-      '/',
-      '/about',
-      '/contact',
-      '/project',
-      '/services'
-    ]
-  },
 })

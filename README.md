@@ -22,7 +22,7 @@ bun install
 
 ## Development Server
 
-Start the development server on `https://jiejiang.com.tw/`:
+Start the development server on `https://jiejiang.com.tw`:
 
 ```bash
 # npm

@@ -2,20 +2,19 @@
   <section id="price" class="my-5">
     <div style="overflow: hidden;">
       <div class="container py-5" data-aos="zoom-out">
-        <p class="header-top">Auto Detailing</p>
-        <h2 class="display-4 mb-5">JIEJIANG packages</h2>
+        <p class="header-top">JIEJIANG Auto Detailing</p>
+        <h2 class="mb-5">汽車美容 價目表</h2>
         <ul class="nav nav-tabs my-3 justify-content-center" id="myTab" role="tablist">
           <li class="nav-item" role="presentation" v-for="(pkg, index) in packages" :key="pkg.id">
             <button
               class="nav-link me-4 px-4 py-1 mb-2"
-              :class="{ active: index === 0 }"
+              :class="{ active: currentTab === index }"
               :id="`${pkg.id}-tab`"
-              data-bs-toggle="tab"
-              :data-bs-target="`#${pkg.id}`"
+              @click="setTab(index)"
               type="button"
               role="tab"
               :aria-controls="pkg.id"
-              :aria-selected="index === 0 ? 'true' : 'false'"
+              :aria-selected="currentTab === index ? 'true' : 'false'"
             >
               {{ pkg.name }}
             </button>
@@ -25,7 +24,7 @@
           <div
             v-for="(pkg, index) in packages"
             :key="pkg.id"
-            :class="['tab-pane fade', { 'show active': index === 0 }]"
+            :class="['tab-pane fade', { 'show active': currentTab === index }]"
             :id="pkg.id"
             role="tabpanel"
             :aria-labelledby="`${pkg.id}-tab`"
@@ -51,7 +50,7 @@
                     target="_blank" 
                     class="btn btn-primary mt-auto px-4 py-3 mx-2"
                     aria-label="前往line連結"
-                    >
+                  >
                     立即預約<Icon name="tabler:arrow-right" class="arrow-icon"></Icon></a>
                 </div>
               </div>
@@ -195,6 +194,11 @@ const packages = ref([
   },
 ]);
 
+const currentTab = ref(0);
+
+const setTab = (index) => {
+  currentTab.value = index;
+};
 
 const processPrice = (price) => {
   return price.replace(/(起)/g, '<span class="h6">$1</span>');
