@@ -80,6 +80,7 @@ export default defineNuxtConfig({
     trailingSlash: false,
   },
   nitro: {
+    preset: 'vercel',
     logLevel: 3,
     prerender: {
       routes: [
@@ -94,6 +95,7 @@ export default defineNuxtConfig({
   },
   image: {
     dir: 'static',
+    provider: 'vercel',
     screens: {
       xs: 320,
       sm: 640,
