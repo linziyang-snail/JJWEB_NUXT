@@ -66,27 +66,28 @@ const prevSlide = () => {
   currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length;
 };
 
+// Function to start autoplay
 const startAutoplay = () => {
-  if (autoplay.value) {
-    interval = setInterval(nextSlide, 5000);
-  }
+  interval = setInterval(() => {
+    if (autoplay.value) {
+      nextSlide();
+    }
+  }, 5000); // Change slide every 5 seconds
 };
 
+// Function to stop autoplay
 const stopAutoplay = () => {
   clearInterval(interval);
 };
 
-// onMounted(() => {
-//   startAutoplay();
-//   // Optionally stop autoplay on user interaction
-//   const carouselElement = document.querySelector('.carousel');
-//   carouselElement.addEventListener('mouseover', stopAutoplay);
-//   carouselElement.addEventListener('mouseout', startAutoplay);
-// });
+onMounted(() => {
+  startAutoplay();
+});
 
-// onUnmounted(() => {
-//   stopAutoplay();
-// });
+onUnmounted(() => {
+  stopAutoplay();
+});
+
 </script>
 
 <style scoped>

@@ -77,6 +77,7 @@ export default defineNuxtConfig({
   ],
   site: {
     url: 'https://jiejiang.com.tw',
+    trailingSlash: false,
   },
   nitro: {
     logLevel: 3,

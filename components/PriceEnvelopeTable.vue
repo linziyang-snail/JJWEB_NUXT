@@ -10,7 +10,7 @@
               <th scope="col">MOS 黑金 8.5 MIL</th>
               <th scope="col">STEK 公司貨</th>
               <th scope="col">SunTek 公司貨</th>
-              <th scope="col">3M 公司貨</th>
+              <th scope="col">BOP 公司貨</th>
             </tr>
           </thead>
           <tbody>
@@ -100,9 +100,9 @@ const prices = ref({
     matte: '12000'
   },
   threem: {
-    sedan: '100000',
-    suv: '110000',
-    largeSuv: '120000',
+    sedan: '118000',
+    suv: '128000',
+    largeSuv: '138000',
     matte: '12000'
   }
 });
