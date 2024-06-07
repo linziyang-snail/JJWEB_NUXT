@@ -93,7 +93,7 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    dir: 'assets',
+    dir: 'static',
     screens: {
       xs: 320,
       sm: 640,
