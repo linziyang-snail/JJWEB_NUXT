@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     baseURL: '/',
-    buildAssetsDir: '/static/',
+    buildAssetsDir: '/_nuxt/',
     head: {
       charset: 'utf-8',
       title: 'JieJiang | 捷匠專業汽車美容 - 只提供最頂級汽車美容服務',
