@@ -18,7 +18,7 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://jiejiang.com.tw/services',
+      content: 'https://jiejiang.com.tw/services/',
     },
     {
       name: 'twitter:title',
@@ -32,7 +32,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://jiejiang.com.tw/services'
+      href: 'https://jiejiang.com.tw/services/'
     }
   ],
 });

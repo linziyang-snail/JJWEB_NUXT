@@ -15,7 +15,7 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://jiejiang.com.tw/project',
+      content: 'https://jiejiang.com.tw/project/',
     },
     {
       name: 'twitter:title',
@@ -29,7 +29,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://jiejiang.com.tw/project'
+      href: 'https://jiejiang.com.tw/project/'
     }
   ],
 });

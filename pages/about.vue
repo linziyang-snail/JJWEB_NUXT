@@ -17,7 +17,7 @@ useHead({
     },
     {
       property: 'og:url',
-      content: 'https://jiejiang.com.tw/about',
+      content: 'https://jiejiang.com.tw/about/',
     },
     {
       name: 'twitter:title',
@@ -31,7 +31,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://jiejiang.com.tw/about'
+      href: 'https://jiejiang.com.tw/about/'
     }
   ],
 });
