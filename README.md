@@ -74,4 +74,17 @@ bun run preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-# JJWEB_NUXT
+# JJWEB_NUXT 如何部署到網站上
+
+```bash
+# generate
+npm run generate
+
+# deploy
+npm run deploy
+
+# github Custom domain
+jiejiang.com.tw
+
+Save
+```
