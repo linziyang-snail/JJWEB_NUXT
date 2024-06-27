@@ -33,5 +33,18 @@ useHead({
     }
   ],
 });
+
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://jiejiang.com.tw/project/',
+  'url': 'https://jiejiang.com.tw/project/',
+  'name': '聯繫捷匠',
+  'description': '不只汽車美容、洗車服務專業，我們也有專業攝影師幫您愛車拍美照。',
+  'inLanguage': 'zh-TW',
+  'isPartOf': {
+    '@id': 'https://jiejiang.com.tw/#website'
+  },
+});
 </script>
 

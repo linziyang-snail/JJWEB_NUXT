@@ -33,4 +33,17 @@ useHead({
     }
   ],
 });
+
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://jiejiang.com.tw/contact/',
+  'url': 'https://jiejiang.com.tw/contact/',
+  'name': '聯繫捷匠',
+  'description': '聯繫捷匠，我們在淡水、竹圍、北投等地區都有提供汽車美容與洗車服務。',
+  'inLanguage': 'zh-TW',
+  'isPartOf': {
+    '@id': 'https://jiejiang.com.tw/#website'
+  },
+});
 </script>

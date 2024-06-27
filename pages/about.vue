@@ -35,5 +35,18 @@ useHead({
     }
   ],
 });
+
+useJsonld({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://jiejiang.com.tw/about/',
+  'url': 'https://jiejiang.com.tw/about/',
+  'name': '關於捷匠',
+  'description': '了解更多關於捷匠專業汽車美容的服務項目，我們致力於提供頂級的汽車美容和洗車服務。',
+  'inLanguage': 'zh-TW',
+  'isPartOf': {
+    '@id': 'https://jiejiang.com.tw/#website'
+  },
+});
 </script>
 

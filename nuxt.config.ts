@@ -74,6 +74,7 @@ export default defineNuxtConfig({
     'vue3-carousel-nuxt',
     '@nuxt/image',
     '@nuxtjs/sitemap',
+    'nuxt-jsonld'
   ],
   site: {
     url: 'https://jiejiang.com.tw/',
