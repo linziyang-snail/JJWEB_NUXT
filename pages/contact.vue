@@ -35,7 +35,7 @@ useHead({
 });
 
 useJsonld({
-  '@context': 'https://schema.org',
+  '@context': 'https://schema.org/',
   '@type': 'WebPage',
   '@id': 'https://jiejiang.com.tw/contact/',
   'url': 'https://jiejiang.com.tw/contact/',

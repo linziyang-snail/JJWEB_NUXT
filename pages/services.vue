@@ -38,7 +38,7 @@ useHead({
 });
 
 useJsonld({
-  '@context': 'https://schema.org',
+  '@context': 'https://schema.org/',
   '@type': 'WebPage',
   '@id': 'https://jiejiang.com.tw/services/',
   'url': 'https://jiejiang.com.tw/services/',
