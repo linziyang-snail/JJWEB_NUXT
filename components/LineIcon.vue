@@ -2,7 +2,7 @@
   <div>
     <!-- Line Icon -->
     <a
-      class="nav-link d-flex align-items-center px-3"
+      class="nav-link d-flex px-3"
       href="javascript:void(0);"
       @click="togglePopup"
       aria-label="前往Line連結"
@@ -96,6 +96,9 @@ function togglePopup() {
   width: 300px;
   padding: 1rem;
   z-index: 101;
+  position: absolute;
+  right: 50px;
+  bottom: 150px;
 }
 
 .popup-content {
@@ -122,7 +125,8 @@ function togglePopup() {
   }
 
   .popup-dialog {
-    width: 250px;
+    right: 20px;
+    bottom: 100px;
   }
 }
 </style>
