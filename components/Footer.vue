@@ -66,7 +66,7 @@
             <p>© 2024 JieJiang, Carwash | All Rights Reserved</p>
           </div>
           <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end align-items-center">
-            <p>© 2024 <a href="#" class="text-decoration-none">Snail Yang</a></p>
+            <p>© 2024 <a href="https://www.instagram.com/snail.yang/" class="text-decoration-none">Snail Yang</a></p>
           </div>
         </div>
       </div>
