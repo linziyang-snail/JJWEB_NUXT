@@ -77,13 +77,13 @@ const packages = ref([
         bookingLink: 'booking.html'
       },
       {
-        title: '基礎漆面維護',
+        title: '基礎打蠟',
         price: '$1,600起',
         features: ['已包含精緻洗車項目', '車身高壓熱水沖洗', '內裝擦拭吸塵', '內裝細節清洗', '專用柏油清潔', '專用鐵粉清潔'],
         bookingLink: 'booking.html'
       },
       {
-        title: '精緻漆面維護',
+        title: '精緻打蠟',
         price: '$3,100起',
         features: ['已包含基礎漆面維護項目', '內裝物品收納整理', '漆面深度清潔', '全車塑料保養'],
         bookingLink: 'booking.html'
@@ -101,7 +101,7 @@ const packages = ref([
         bookingLink: 'booking.html'
       },
       {
-        title: '兩年期鍍膜',
+        title: '日本ZX鍍膜',
         price: '$2,5000起',
         features: ['已包含漆面氧化處理項目', '全車細節刷洗', '引擎室清潔', '漆面亮度調整', '漆面整平','車內細部清潔','保固24個月'],
         bookingLink: 'booking.html'
@@ -109,89 +109,142 @@ const packages = ref([
       {
         title: '滲透型鍍膜60%自體修復',
         price: '$35,000起',
-        features: ['已包含兩年期鍍膜項目', '漆面深度整平修復', '60%自體修復塗層', '保固36個月'],
+        features: ['已包含日本ZX鍍膜項目', '漆面深度整平修復', '60%自體修復塗層', '保固36個月'],
         bookingLink: 'booking.html'
       },
       {
         title: '雙劑型漆面高光鍍膜',
         price: '$35,000起',
-        features: ['已包含兩年期鍍膜項目', '漆面深度整平修復', '雙層鍍膜劑塗層', '保固36個月'],
+        features: ['已包含日本ZX鍍膜項目', '漆面深度整平修復', '雙層鍍膜劑塗層', '保固36個月'],
         bookingLink: 'booking.html'
       },
     ]
   },
   {
-    id: 'interior-care',
-    name: 'interior care & other',
-    plans: [
+  id: 'interior-care',
+  name: 'interior care & other',
+  plans: [
     {
-        title: '內裝美容',
-        price: '$4,500起',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-      {
-        title: '內裝全車拆洗',
-        price: '$20,000起',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-      {
-        title: '前檔玻璃鍍膜',
-        price: '$1,200',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-      {
-        title: '全車玻璃鍍膜',
-        price: '$3,500',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-      {
-        title: '鋁圈鍍膜（拆卸/不拆）',
-        price: '$8,000/$4,000',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-      {
-        title: '底盤深層清潔',
-        price: '$20,000起',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-    ]
-  },
-  {
-    id: 'car-wrap',
-    name: 'car wrap',
-    plans: [
+      title: '內裝美容',
+      price: '$4,500起',
+      features: [
+        '皮革清潔',
+        '全車吸塵',
+        '蒸氣高溫殺菌',
+        '其餘細項由專業師傅評估'
+      ],
+      bookingLink: 'booking.html'
+    },
     {
-        title: '全車犀牛皮',
-        price: '$100,000/150,000起',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-      {
-        title: '迎風面犀牛皮',
-        price: '$45,000/70,000起',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-      {
-        title: '全車改色膜',
-        price: '$70,000起',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-      {
-        title: '局部犀牛皮',
-        price: '現場報價',
-        features: ['Quisque rhoncus', 'Lorem ipsum dolor', 'Vivamus velit mir', 'Velit mir', 'Elit mir ivamus'],
-        bookingLink: 'booking.html'
-      },
-    ]
-  },
+      title: '內裝全車拆洗',
+      price: '$20,000起',
+      features: [
+        '拆卸清潔座椅',
+        '地毯深層清洗',
+        '內裝消毒',
+        '內部細節處理',
+        '其餘細項由專業師傅評估'
+      ],
+      bookingLink: 'booking.html'
+    },
+    {
+      title: '前檔玻璃鍍膜',
+      price: '$1,200',
+      features: [
+        '前檔玻璃清潔',
+        '鍍膜處理',
+        '提高視野清晰度',
+        '延長玻璃壽命'
+      ],
+      bookingLink: 'booking.html'
+    },
+    {
+      title: '全車玻璃鍍膜',
+      price: '$3,500',
+      features: [
+        '全車玻璃清潔',
+        '鍍膜處理',
+        '防止水痕與污漬',
+        '增加玻璃耐用度'
+      ],
+      bookingLink: 'booking.html'
+    },
+    {
+      title: '鋁圈鍍膜（拆卸/不拆）',
+      price: '$8,000/$4,000',
+      features: [
+        '鋁圈徹底清潔',
+        '鍍膜處理',
+        '防止汙垢附著',
+        '延長鋁圈使用壽命'
+      ],
+      bookingLink: 'booking.html'
+    },
+    {
+      title: '底盤深層清潔',
+      price: '$20,000起',
+      features: [
+        '底盤全方位清潔',
+        '防鏽處理',
+        '檢查及維修',
+        '確保車輛安全'
+      ],
+      bookingLink: 'booking.html'
+    }
+  ]
+},
+
+{
+  id: 'car-wrap',
+  name: 'CAR WRAP',
+  plans: [
+    {
+      title: '全車犀牛皮',
+      price: '$100,000/150,000起',
+      features: [
+        '全車保護',
+        '防刮耐磨',
+        '增強光澤',
+        '專業施工'
+      ],
+      bookingLink: 'booking.html'
+    },
+    {
+      title: '迎風面犀牛皮',
+      price: '$45,000/70,000起',
+      features: [
+        '車頭防護',
+        '防止石頭與碎片損傷',
+        '持久耐用',
+        '保護原車漆'
+      ],
+      bookingLink: 'booking.html'
+    },
+    {
+      title: '全車改色膜',
+      price: '$70,000起',
+      features: [
+        '全車改色',
+        '多樣顏色選擇',
+        '高質感光澤',
+        '保護原車漆'
+      ],
+      bookingLink: 'booking.html'
+    },
+    {
+      title: '局部犀牛皮',
+      price: '現場報價',
+      features: [
+        '特定區域保護',
+        '防刮耐磨',
+        '增強光澤',
+        '專業施工'
+      ],
+      bookingLink: 'booking.html'
+    }
+  ]
+}
+
 ]);
 
 const currentTab = ref(0);

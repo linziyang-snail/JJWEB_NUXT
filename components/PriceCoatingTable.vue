@@ -6,7 +6,7 @@
             <tr>
               <th class="bg-secondary border border-secondary" scope="col">內容 / 項目</th>
               <th scope="col">漆面氧化處理</th>
-              <th scope="col">兩年期鍍膜</th>
+              <th scope="col">日本ZX鍍膜</th>
               <th scope="col">滲透型鍍膜60%自體修復</th>
               <th scope="col">雙劑型漆面高光鍍膜</th>
             </tr>
