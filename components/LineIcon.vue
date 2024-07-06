@@ -32,7 +32,7 @@
               捷匠 - 官方LINE
             </a>
             <a 
-              href="https://line.me/R/ti/p/PAOMU_DEPT_LINK" 
+              href="https://line.me/R/ti/p/@rb_33" 
               target="_blank" 
               class="list-group-item list-group-item-action d-flex align-items-center"
             >
