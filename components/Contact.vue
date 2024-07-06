@@ -54,6 +54,16 @@
               >
                 <Icon :name="link.icon" class="social-icon" style="font-size: 24px;"></Icon>
               </a>
+              <a 
+                v-for="(link, idx) in socialLinks" 
+                :key="idx" 
+                :href="link.url" 
+                class="text-secondary"
+                target="_blank"
+                :aria-label="`前往${link.icon}連結`"
+              >
+                <Icon :name="link.icon" class="social-icon" style="font-size: 24px;"></Icon>
+              </a>
             </div>
           </div>
         </div>
