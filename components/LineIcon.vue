@@ -1,20 +1,21 @@
 <template>
   <div>
-    <!-- Line Icon -->
-    <a
-      class="nav-link d-flex px-3"
-      href="javascript:void(0);"
-      @click="togglePopup"
-      aria-label="前往Line連結"
-    >
-      <Icon
-        name="ri:line-fill"
-        color="#00c300"
-        class="social-icon line-icon"
-        style="font-size: 20px;"
+    <!-- Line Icon with "點我預約" text -->
+    <div class="reservation-container" @click="togglePopup">
+      <a
+        class="nav-link d-flex align-items-center justify-content-center"
+        href="javascript:void(0);"
+        aria-label="前往Line連結"
       >
-      </Icon>
-    </a>
+        <!-- <Icon
+          name="ri:line-fill"
+          class="social-icon line-icon"
+          style="font-size: 36px; color: white;"
+        >
+        </Icon> -->
+        <span class="reservation-text">我要預約！</span>
+      </a>
+    </div>
 
     <!-- Popup Dialog -->
     <div v-if="showPopup" class="popup-overlay" @click="togglePopup">
@@ -57,18 +58,75 @@ function togglePopup() {
 </script>
 
 <style scoped>
-.line-icon {
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.reservation-container {
   position: fixed;
   bottom: 50px;
   right: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.line-icon {
   width: 70px;
   height: 70px; 
-  cursor: pointer;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #00c300, #00e600);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 99;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: bounce 2s infinite, pulse 2s infinite;
+}
+
+.reservation-text {
+  margin-left: 10px;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(45deg, #00c300, #00e600);
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: bounce 2s infinite, pulse 2s infinite;
 }
 
 .line-icon:hover {
@@ -116,9 +174,12 @@ function togglePopup() {
 }
 
 @media (max-width: 768px) {
-  .line-icon {
+  .reservation-container {
     bottom: 20px;
     right: 20px;
+  }
+
+  .line-icon {
     width: 50px;
     height: 50px;
     font-size: 24px;
