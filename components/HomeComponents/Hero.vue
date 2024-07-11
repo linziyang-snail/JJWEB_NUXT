@@ -1,6 +1,6 @@
 <template>
     <section id="hero">
-        <NuxtImg
+      <NuxtImg
         :placeholder="50"
         src="/banner/banner-home.jpg" 
         class="hero-image"
@@ -30,49 +30,45 @@
     </section>
   </template>
   
-  <script setup>
-  const bannerImage = '/banner/banner-home.jpg';
-  </script>
+  <style scoped>
+    #hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
   
-  <style>
-  #hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-  }
+    .hero-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
   
-  .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
-  }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
   
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 0;
-  }
-  
-  .container {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-  }
-  
-  .col-md-6.offset-md-3 {
-    margin: 0;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    
+    .col-md-6.offset-md-3 {
+      margin: 0;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   </style>
   
