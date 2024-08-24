@@ -30,7 +30,7 @@
     </section>
   </template>
   
-  <style scoped>
+  <style>
     #hero {
       display: flex;
       justify-content: center;

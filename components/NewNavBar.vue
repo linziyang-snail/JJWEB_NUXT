@@ -22,7 +22,7 @@
             <button class="btn-close btn-close-white" @click="toggleMenu"></button>
           </div>
           <ul class="navbar-nav align-items-center justify-content-end justify-content-xxl-center flex-grow-1 pe-3">
-            <li class="nav-item" v-for="link in navLinks" :key="link.name">
+            <li class="nav-item" v-for="link in breadcrumbs" :key="link.name">
               <NuxtLink
                 class="nav-link text-white text-uppercase mx-2 px-3 mb-2 mb-lg-0 d-flex align-items-center"
                 :to="link.path"
@@ -59,12 +59,12 @@
   const isMenuOpen = ref(false);
   const isScrolled = ref(false);
   
-  const navLinks = [
-    { name: "首頁", path: "/" },
-    { name: "關於捷匠", path: "/about" },
-    { name: "施工實照", path: "/project" },
-    { name: "服務項目", path: "/services" },
-    { name: "聯繫捷匠", path: "/contact" },
+  const breadcrumbs = [
+    { name: "首頁", path: "/", item: "/" },
+    { name: "關於捷匠", path: "/about" , item: "/about" },
+    { name: "施工實照", path: "/project" , item: "/project"},
+    { name: "服務項目", path: "/services" , item: "/services"},
+    { name: "聯繫捷匠", path: "/contact" , item: "/contact"},
   ];
   
   const socialLinks = [
@@ -74,6 +74,12 @@
     { icon: "ri:tiktok-fill", url: "https://www.tiktok.com/@jiejiang_tw?is_from_webapp=1&sender_device=pc" },
     { icon: "ri:line-fill", url: "https://line.me/R/ti/p/@639xmqad" },
   ];
+
+  useSchemaOrg([
+  defineBreadcrumb({
+    itemListElement: breadcrumbs
+  }),
+])
   
   function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value;

@@ -23,4 +23,24 @@ onMounted(() => {
     });
 });
 
+useSchemaOrg([
+  defineOrganization({
+    '@type': 'Organization',
+    name: 'JieJiang | 捷匠專業汽車美容 - 淡水・竹圍・北投 | 洗車・鍍膜・包膜・打蠟',
+    url: 'https://jiejiang.com.tw/',
+    logo: 'https://jiejiang.com.tw/og-logo.png',
+    sameAs: [
+      'https://www.facebook.com/Jiejiang2015/?locale=zh_TW',
+      'https://www.instagram.com/jiejiang_autodetailing',
+      'https://www.instagram.com/jiejiang_beitou_/',
+      'https://www.instagram.com/jiejiang_zhuwei/',
+    ]
+  }),
+  defineWebSite({
+    name: 'JieJiang | 捷匠專業汽車美容 - 淡水・竹圍・北投 | 洗車・鍍膜・包膜・打蠟',
+    url: 'https://jiejiang.com.tw/'
+  }),
+  defineWebPage()
+]);
+
 </script>

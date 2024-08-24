@@ -1,7 +1,13 @@
 <template>
   <div class="loading-overlay" v-show="isLoading">
     <div class="loading-content">
-      <img src="../assets/logo/JIEJIANG_Logo.png" alt="Brand Logo" class="logo">
+      <NuxtImg 
+          class="logo" 
+          src="/logo/JIEJIANG_Logo.png" 
+          alt="Loading Logo" 
+          format="webp"
+          quality="50"
+      />
       <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
