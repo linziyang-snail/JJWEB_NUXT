@@ -24,7 +24,7 @@
 <script lang="ts" setup>
     // 靜態 JSON-LD
     useJsonld({
-    '@context': 'https://schema.org/',
+    '@context': 'https://schema.org',
     '@type': 'WebPage',
     '@id': 'https://jiejiang.com.tw/',
     'url': 'https://jiejiang.com.tw/',

@@ -32,8 +32,12 @@
           >
             <div class="row py-4 d-flex">
               <div class="col-lg-3 pb-4 flex" v-for="(plan, planIndex) in pkg.plans" :key="`${pkg.id}-${planIndex}`">
-                <div class="py-5 plan-post text-center h-100">
-                  <h3 class="header-top">{{ plan.title }}</h3>
+                <div class="py-5 plan-post text-center h-100 position-relative">
+                  <span v-if="plan.memberOnly" class="member-star">★</span>
+                  <h3 class="header-top">
+                    {{ plan.title }}
+                  </h3>
+
                   <h4 class="mb-5 display text-wrap">
                     <span v-html="processPrice(plan.price)"></span>
                   </h4>
@@ -77,15 +81,22 @@ const packages = ref([
         bookingLink: 'booking.html'
       },
       {
-        title: '基礎打蠟',
+        title: '基礎漆面打蠟',
         price: '$1,600起',
         features: ['已包含精緻洗車項目', '車身高壓熱水沖洗', '內裝擦拭吸塵', '內裝細節清洗', '專用柏油清潔', '專用鐵粉清潔'],
         bookingLink: 'booking.html'
       },
       {
-        title: '精緻打蠟',
+        title: '精緻漆面護理（會員限定）',
         price: '$3,100起',
-        features: ['已包含基礎漆面維護項目', '內裝物品收納整理', '漆面深度清潔', '全車塑料保養'],
+        features: ['已包含基礎漆面打蠟項目', '內裝物品收納整理', '漆面深度清潔', '全車塑料保養'],
+        bookingLink: 'booking.html',
+        memberOnly: true 
+      },
+      {
+        title: '手作漆面上蠟',
+        price: '$2,600起',
+        features: ['建議加購清潔蠟前置作業', '已包含基礎漆面打蠟項目', '內裝物品收納整理','全車塑料保養',],
         bookingLink: 'booking.html'
       },
     ]
@@ -258,3 +269,17 @@ const processPrice = (price) => {
 };
 
 </script>
+
+<style scoped>
+.member-star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffd700;
+  font-size: 5rem;
+  transform: rotate(15deg);
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+  animation: starShine 2s infinite;
+  z-index: 1;
+}
+</style>
