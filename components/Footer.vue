@@ -4,12 +4,7 @@
       <div class="container">
         <div class="d-flex flex-wrap">
           <div class="col-12 col-md-4 d-flex justify-content-center align-items-center border-end-md mb-4 mb-md-0">
-            <NuxtImg
-              src="/logo/logo-footer.png" 
-              alt="捷匠專業汽車美容footer LOGO"
-              class="img-fluid"
-              format="webp"
-            />
+            <NuxtImg src="/logo/logo-footer.png" alt="捷匠專業汽車美容footer LOGO" class="img-fluid" format="webp" />
           </div>
           <div class="col-12 col-md-4 text-center padding-medium border-end-md mb-4 mb-md-0">
             <p class="header-top mb-4">營業時間</p>
@@ -18,13 +13,8 @@
               <p v-for="time in store.times" :key="time">{{ time }}</p>
             </div>
             <div>
-              <a 
-                v-for="social in socialLinks" :key="social.name" 
-                :href="social.url" 
-                target="_blank"
-                :aria-label="`前往${social.url}連結`"
-                class="mx-2"
-              >
+              <a v-for="social in socialLinks" :key="social.name" :href="social.url" target="_blank"
+                :aria-label="`前往${social.url}連結`" class="mx-2">
                 <Icon :name="social.icon" class="social-icon" style="font-size: 24px"></Icon>
               </a>
             </div>
@@ -33,24 +23,14 @@
             <div v-for="store in stores" :key="store.name" class="mb-4">
               <p class="header-top mb-2">{{ store.title }}</p>
               <address class="mb-2">
-                <a 
-                  :href="store.googleMapLink" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  :aria-label="`前往${store.googleMapLink}連結`"
-                  class="text-decoration-none"
-                >
+                <a :href="store.googleMapLink" target="_blank" rel="noopener noreferrer"
+                  :aria-label="`前往${store.googleMapLink}連結`" class="text-decoration-none">
                   {{ store.address }}
                 </a>
               </address>
               <div>
-                <a 
-                  v-for="social in store.socialLinks" :key="social.name" 
-                  :href="social.url" 
-                  target="_blank"
-                  :aria-label="`前往${social.url}連結`"
-                  class="mx-2"
-                >
+                <a v-for="social in store.socialLinks" :key="social.name" :href="social.url" target="_blank"
+                  :aria-label="`前往${social.url}連結`" class="mx-2">
                   <Icon :name="social.icon" class="social-icon" style="font-size: 24px"></Icon>
                 </a>
               </div>
@@ -89,17 +69,17 @@ const stores = ref([
       { name: 'Instagram', url: 'https://www.instagram.com/jiejiang_autodetailing/', icon: 'ri:instagram-line' }
     ]
   },
-  {
-    name: '竹圍店',
-    title: '捷匠專業汽車美容-竹圍店',
-    address: '新北市淡水區民生路124巷25號',
-    googleMapLink: 'https://www.google.com/maps/search/?api=1&query=新北市淡水區民生路124巷25號',
-    times: ['星期一 公休', '週二至週日 10 am - 8 pm'],
-    socialLinks: [
-      { name: 'Facebook', url: 'https://www.facebook.com/p/%E6%8D%B7%E5%8C%A0%E5%B0%88%E6%A5%AD%E6%B1%BD%E8%BB%8A%E7%BE%8E%E5%AE%B9-%E7%AB%B9%E5%9C%8D%E5%BA%97-100057469847306/', icon: 'ri:facebook-fill' },
-      { name: 'Instagram', url: 'https://www.instagram.com/jiejiang_zhuwei/', icon: 'ri:instagram-line' }
-    ]
-  },
+  // {
+  //   name: '竹圍店',
+  //   title: '捷匠專業汽車美容-竹圍店',
+  //   address: '新北市淡水區民生路124巷25號',
+  //   googleMapLink: 'https://www.google.com/maps/search/?api=1&query=新北市淡水區民生路124巷25號',
+  //   times: ['星期一 公休', '週二至週日 10 am - 8 pm'],
+  //   socialLinks: [
+  //     { name: 'Facebook', url: 'https://www.facebook.com/p/%E6%8D%B7%E5%8C%A0%E5%B0%88%E6%A5%AD%E6%B1%BD%E8%BB%8A%E7%BE%8E%E5%AE%B9-%E7%AB%B9%E5%9C%8D%E5%BA%97-100057469847306/', icon: 'ri:facebook-fill' },
+  //     { name: 'Instagram', url: 'https://www.instagram.com/jiejiang_zhuwei/', icon: 'ri:instagram-line' }
+  //   ]
+  // },
   {
     name: '北投店',
     title: '捷匠專業汽車美容-北投店',
@@ -125,20 +105,23 @@ const socialLinks = ref([
   font-size: 1.2em;
   font-weight: bold;
 }
+
 .padding-medium {
   padding: 1.5rem;
 }
+
 .border-end-md {
   border-right: 1px solid #ccc;
 }
+
 @media (max-width: 767.98px) {
   .border-end-md {
     border-right: none;
   }
 }
+
 .store-name {
   position: relative;
   display: inline-block;
 }
-
 </style>

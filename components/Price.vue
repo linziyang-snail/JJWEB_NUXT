@@ -211,7 +211,7 @@ const packages = ref([
   plans: [
     {
       title: '全車犀牛皮',
-      price: '$100,000/150,000起',
+      price: '$60,000/150,000起',
       features: [
         '全車保護',
         '防刮耐磨',

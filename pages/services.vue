@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <Banner />
-        <Services />
-        <Price />
-        <PriceTableCarousel />
-    </div>
+  <div>
+    <Banner />
+    <Services />
+    <Price />
+    <PriceTableCarousel />
+  </div>
 </template>
 
 
@@ -38,12 +38,12 @@ useHead({
 });
 
 useJsonld({
-  '@context': 'https://schema.org/',
+  '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://jiejiang.com.tw/services/',
   'url': 'https://jiejiang.com.tw/services/',
   'name': '服務項目',
-  'description': '提供淡水、竹圍、北投等地區汽車美容、洗車、鍍膜、包膜等多項頂級服務。',
+  'description': '提供淡水、紅樹林、竹圍、北投等地區汽車美容、洗車、鍍膜、包膜等多項頂級服務。',
   'inLanguage': 'zh-TW',
   'isPartOf': {
     '@id': 'https://jiejiang.com.tw/#website'

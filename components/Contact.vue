@@ -10,26 +10,15 @@
             <h3 class="element-title text-uppercase fs-6 fw-bold header-top">{{ office.title }}</h3>
             <div class="contact-address mb-3">
               <address class="mb-2">
-                <a 
-                  :href="office.googleMapLink" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  :aria-label="`前往${office.googleMapLink}連結`"
-                  class="text-decoration-none"
-                >
+                <a :href="office.googleMapLink" target="_blank" rel="noopener noreferrer"
+                  :aria-label="`前往${office.googleMapLink}連結`" class="text-decoration-none">
                   {{ office.address }}
                 </a>
               </address>
             </div>
             <div class="contact-number mb-3">
-              <a 
-                v-for="(number, idx) in office.contactNumbers" 
-                :key="idx" 
-                :href="`tel:${number}`" 
-                itemprop="telephone"
-                :aria-label="`聯繫電話: ${number}`"
-                class="d-block mb-1 text-decoration-none"
-              >
+              <a v-for="(number, idx) in office.contactNumbers" :key="idx" :href="`tel:${number}`" itemprop="telephone"
+                :aria-label="`聯繫電話: ${number}`" class="d-block mb-1 text-decoration-none">
                 {{ number }}
               </a>
             </div>
@@ -44,24 +33,12 @@
               </a>
             </div> -->
             <div class="social-links d-flex gap-2 d-flex justify-content-center">
-              <a 
-                v-for="(link, idx) in office.socialLinks" 
-                :key="idx" 
-                :href="link.url" 
-                class="text-secondary"
-                target="_blank"
-                :aria-label="`前往${link.icon}連結`"
-              >
+              <a v-for="(link, idx) in office.socialLinks" :key="idx" :href="link.url" class="text-secondary"
+                target="_blank" :aria-label="`前往${link.icon}連結`">
                 <Icon :name="link.icon" class="social-icon" style="font-size: 24px;"></Icon>
               </a>
-              <a 
-                v-for="(link, idx) in socialLinks" 
-                :key="idx" 
-                :href="link.url" 
-                class="text-secondary"
-                target="_blank"
-                :aria-label="`前往${link.icon}連結`"
-              >
+              <a v-for="(link, idx) in socialLinks" :key="idx" :href="link.url" class="text-secondary" target="_blank"
+                :aria-label="`前往${link.icon}連結`">
                 <Icon :name="link.icon" class="social-icon" style="font-size: 24px;"></Icon>
               </a>
             </div>
@@ -94,17 +71,17 @@ const offices = ref([
       { name: 'Instagram', icon: 'ri:instagram-line', url: 'https://www.instagram.com/jiejiang_autodetailing/' }
     ],
   },
-  {
-    title: '捷匠專業汽車美容-竹圍店',
-    address: '新北市淡水區民生路124巷25號',
-    googleMapLink: 'https://www.google.com/maps/search/?api=1&query=新北市淡水區民生路124巷25號',
-    contactNumbers: ['02-2808-7831'],
-    emailAddress: 'dlive0829@gmail.com',
-    socialLinks: [
-      { name: 'Facebook', icon: 'ri:facebook-fill', url: 'https://www.facebook.com/p/%E6%8D%B7%E5%8C%A0%E5%B0%88%E6%A5%AD%E6%B1%BD%E8%BB%8A%E7%BE%8E%E5%AE%B9-%E7%AB%B9%E5%9C%8D%E5%BA%97-100057469847306/' },
-      { name: 'Instagram', icon: 'ri:instagram-line', url: 'https://www.instagram.com/jiejiang_zhuwei/' }
-    ],
-  },
+  // {
+  //   title: '捷匠專業汽車美容-竹圍店',
+  //   address: '新北市淡水區民生路124巷25號',
+  //   googleMapLink: 'https://www.google.com/maps/search/?api=1&query=新北市淡水區民生路124巷25號',
+  //   contactNumbers: ['02-2808-7831'],
+  //   emailAddress: 'dlive0829@gmail.com',
+  //   socialLinks: [
+  //     { name: 'Facebook', icon: 'ri:facebook-fill', url: 'https://www.facebook.com/p/%E6%8D%B7%E5%8C%A0%E5%B0%88%E6%A5%AD%E6%B1%BD%E8%BB%8A%E7%BE%8E%E5%AE%B9-%E7%AB%B9%E5%9C%8D%E5%BA%97-100057469847306/' },
+  //     { name: 'Instagram', icon: 'ri:instagram-line', url: 'https://www.instagram.com/jiejiang_zhuwei/' }
+  //   ],
+  // },
   {
     title: '捷匠專業汽車美容-北投店',
     address: '台北市北投區中央南路二段33號',
@@ -128,7 +105,8 @@ const socialLinks = ref([
 <style scoped>
 .contact-info .content-box {
   border: 1px solid #ddd;
-  background-color: #f8f9fa;;
+  background-color: #f8f9fa;
+  ;
   border-radius: 10px;
   padding: 20px;
 }
@@ -151,8 +129,8 @@ const socialLinks = ref([
 
 @media (max-width: 768px) {
   .qr-code img {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%;
+    height: auto;
   }
 }
 </style>

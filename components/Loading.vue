@@ -1,22 +1,43 @@
 <template>
-  <div class="loading-overlay" v-show="isLoading">
+  <div class="loading-overlay" v-if="isLoading">
     <div class="loading-content">
       <NuxtImg 
-          class="logo" 
-          src="/logo/JIEJIANG_Logo.png" 
-          alt="Loading Logo" 
-          format="webp"
-          quality="50"
+        class="logo" 
+        src="/logo/JIEJIANG_Logo.png" 
+        alt="Loading Logo"
+        format="webp"
+        quality="10" 
       />
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar" role="progressbar"></div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-  const isLoading = useState('isLoading',() => {return true});
+const isLoading = useState('isLoading', () => true);
+
+onMounted(() => {
+  // 設定最小載入時間
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 3000);
+});
+
+// 路由變化時顯示載入畫面
+const router = useRouter();
+router.beforeEach((to, from, next) => {
+  isLoading.value = true;
+  next();
+});
+
+router.afterEach(() => {
+  // 路由變化完成後延遲關閉載入畫面
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 1000);
+});
 </script>
 
 <style scoped>
@@ -26,34 +47,37 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black; /* 背景帶有透明度 */
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1s ease, visibility 1s ease; /* 添加過渡效果 */
   z-index: 9999;
 }
 
-.loading-content .logo {
+.loading-content {
+  text-align: center;
+}
+
+.logo {
   width: 250px;
+  height: auto;
   margin-bottom: 20px;
+  display: block;
 }
 
 .progress {
-  width: 100%; /* 調整進度條寬度 */
-  height: 20px; /* 進度條高度 */
-  background-color: #ddd; /* 背景顏色 */
-  border-radius: 10px; /* 圓角效果 */
+  width: 250px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
   overflow: hidden;
-  position: relative;
+  margin: 0 auto;
 }
 
 .progress-bar {
   width: 0;
   height: 100%;
-  background-color: #F6452D !important;
+  background-color: #F6452D;
   animation: loading 3s infinite;
 }
 
