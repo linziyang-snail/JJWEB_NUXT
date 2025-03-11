@@ -62,7 +62,7 @@ const packages = ref([
       },
       {
         title: '基礎漆面護理',
-        price: '$1,400起',
+        price: '$1,600起',
         features: ['已包含精緻洗車項目', '內裝擦拭吸塵', '內裝細節清洗', '專用柏油清潔', '專用鐵粉清潔'],
         bookingLink: 'booking.html'
       },
