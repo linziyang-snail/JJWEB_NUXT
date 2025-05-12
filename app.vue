@@ -26,7 +26,7 @@ onMounted(() => {
 useSchemaOrg([
   defineOrganization({
     '@type': 'Organization',
-    name: 'JieJiang | 捷匠專業汽車美容 - 淡水・北投 | 洗車・鍍膜・包膜・打蠟',
+    name: 'JieJiang | 捷匠專業汽車美容 - 淡水・三重・北投 | 洗車・鍍膜・包膜・打蠟',
     url: 'https://jiejiang.com.tw/',
     logo: 'https://jiejiang.com.tw/og-logo.png',
     sameAs: [
@@ -37,7 +37,7 @@ useSchemaOrg([
     ]
   }),
   defineWebSite({
-    name: 'JieJiang | 捷匠專業汽車美容 - 淡水・北投 | 洗車・鍍膜・包膜・打蠟',
+    name: 'JieJiang | 捷匠專業汽車美容 - 淡水・三重・北投 | 洗車・鍍膜・包膜・打蠟',
     url: 'https://jiejiang.com.tw/'
   }),
   defineWebPage()

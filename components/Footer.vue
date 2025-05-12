@@ -69,17 +69,17 @@ const stores = ref([
       { name: 'Instagram', url: 'https://www.instagram.com/jiejiang_autodetailing/', icon: 'ri:instagram-line' }
     ]
   },
-  // {
-  //   name: '竹圍店',
-  //   title: '捷匠專業汽車美容-竹圍店',
-  //   address: '新北市淡水區民生路124巷25號',
-  //   googleMapLink: 'https://www.google.com/maps/search/?api=1&query=新北市淡水區民生路124巷25號',
-  //   times: ['星期一 公休', '週二至週日 10 am - 8 pm'],
-  //   socialLinks: [
-  //     { name: 'Facebook', url: 'https://www.facebook.com/p/%E6%8D%B7%E5%8C%A0%E5%B0%88%E6%A5%AD%E6%B1%BD%E8%BB%8A%E7%BE%8E%E5%AE%B9-%E7%AB%B9%E5%9C%8D%E5%BA%97-100057469847306/', icon: 'ri:facebook-fill' },
-  //     { name: 'Instagram', url: 'https://www.instagram.com/jiejiang_zhuwei/', icon: 'ri:instagram-line' }
-  //   ]
-  // },
+  {
+    name: '三重店',
+    title: '捷匠專業汽車美容-三重店',
+    address: '新北市三重區安慶街277號1樓',
+    googleMapLink: 'https://www.google.com/maps/search/?api=1&query=新北市三重區安慶街277號1樓',
+    times: ['無公休', '週一至週日 10 am - 8 pm'],
+    socialLinks: [
+      { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61575932133602', icon: 'ri:facebook-fill' },
+      { name: 'Instagram', url: 'https://www.instagram.com/jiejiang_sanchong/', icon: 'ri:instagram-line' }
+    ]
+  },
   {
     name: '北投店',
     title: '捷匠專業汽車美容-北投店',

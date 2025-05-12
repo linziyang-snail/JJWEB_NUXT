@@ -7,18 +7,18 @@ export default defineNuxtConfig({
     buildAssetsDir: '/static/',
     head: {
       charset: 'utf-8',
-      title: 'JieJiang | 捷匠專業汽車美容 - 淡水・北投 | 洗車・鍍膜・包膜・打蠟',
+      title: 'JieJiang | 捷匠專業汽車美容 - 淡水・三重・北投 | 洗車・鍍膜・包膜・打蠟',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { name: 'description', content: '捷匠專業汽車美容成立於2015年，在淡水、北投設有分店，致力於提供頂級的汽車美容和洗車服務，絕對是在地人推薦首選。無論是機車或汽車，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、紅樹林、竹圍還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
-        { name: 'keywords', content: '捷匠, 汽車美容, 洗車, 淡水, 竹圍, 北投, 鍍膜, 包膜, 打蠟, 淡水汽車美容, 竹圍汽車美容, 北投汽車美容' },
+        { name: 'description', content: '捷匠專業汽車美容成立於2015年，在淡水、三重、北投設有分店，致力於提供頂級的汽車美容和洗車服務，絕對是在地人推薦首選。無論是機車或汽車，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、紅樹林、竹圍、三重還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
+        { name: 'keywords', content: '捷匠, 汽車美容, 洗車, 淡水, 竹圍, 北投, 三重, 鍍膜, 包膜, 打蠟, 淡水汽車美容, 竹圍汽車美容, 北投汽車美容, 三重汽車美容' },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: '捷匠專業汽車美容' },
         { name: 'publisher', content: '捷匠專業汽車美容' },
         
         // Open Graph Meta Tags
-        { property: 'og:title', content: 'JieJiang | 捷匠專業汽車美容 - 淡水 | 北投 頂級洗車/鍍膜/包膜/打蠟服務' },
-        { property: 'og:description', content: '捷匠專業汽車美容成立於2015年，在淡水、北投設有分店，致力於提供頂級的汽車美容和洗車服務，絕對是在地人推薦首選。無論是機車或汽車，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、紅樹林、竹圍還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
+        { property: 'og:title', content: 'JieJiang | 捷匠專業汽車美容 - 淡水・三重・北投 | 洗車・鍍膜・包膜・打蠟' },
+        { property: 'og:description', content: '捷匠專業汽車美容成立於2015年，在淡水、三重、北投設有分店，致力於提供頂級的汽車美容和洗車服務，絕對是在地人推薦首選。無論是機車或汽車，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、紅樹林、竹圍、三重還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://jiejiang.com.tw/' },
         { property: 'og:image', content: 'https://jiejiang.com.tw/og-logo.png' },
@@ -26,8 +26,8 @@ export default defineNuxtConfig({
   
         // Twitter Meta Tags
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'JieJiang | 捷匠專業汽車美容 - 淡水 | 北投 頂級洗車/鍍膜/包膜/打蠟服務' },
-        { name: 'twitter:description', content: '捷匠專業汽車美容成立於2015年，在淡水、北投設有分店，致力於提供頂級的汽車美容和洗車服務，絕對是在地人推薦首選。無論是機車或汽車，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、紅樹林、竹圍還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
+        { name: 'twitter:title', content: 'JieJiang | 捷匠專業汽車美容 - 淡水・三重・北投 | 洗車・鍍膜・包膜・打蠟' },
+        { name: 'twitter:description', content: '捷匠專業汽車美容成立於2015年，在淡水、三重、北投設有分店，致力於提供頂級的汽車美容和洗車服務，絕對是在地人推薦首選。無論是機車或汽車，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、紅樹林、竹圍、三重還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
         { name: 'twitter:image', content: 'https://jiejiang.com.tw/og-logo.png' },
         { name: 'twitter:site', content: '@yourtwitterhandle' },
   
@@ -36,8 +36,8 @@ export default defineNuxtConfig({
         { property: 'fb:profile_id', content: 'Jiejiang2015' },
   
         // LinkedIn Meta Tags
-        { property: 'linkedin:title', content: 'JieJiang | 捷匠專業汽車美容 - 淡水 | 北投 頂級洗車/鍍膜/包膜/打蠟服務' },
-        { property: 'linkedin:description', content: '捷匠專業汽車美容成立於2015年，在淡水、北投設有分店，致力於提供頂級的汽車美容和洗車服務，絕對是在地人推薦首選。無論是機車或汽車，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、紅樹林、竹圍還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
+        { property: 'linkedin:title', content: 'JieJiang | 捷匠專業汽車美容 - 淡水・三重・北投 | 洗車・鍍膜・包膜・打蠟' },
+        { property: 'linkedin:description', content: '捷匠專業汽車美容成立於2015年，在淡水、三重、北投設有分店，致力於提供頂級的汽車美容和洗車服務，絕對是在地人推薦首選。無論是機車或汽車，我們都能提供專業的基本護理、深度護理、客製化服務、鍍膜施作和包膜服務。捷匠的洗車美容服務不僅僅是基本清潔，我們將專業知識融入每個客戶的需求中，確保每個蠟品和清潔藥劑的特性都得到充分發揮。無論您身處淡水、紅樹林、竹圍、三重還是北投，捷匠都能為您的愛車提供最好的護理服務。未來，我們將繼續致力於為每一位顧客帶來卓越的汽車美容體驗。' },
         { property: 'linkedin:image', content: 'https://jiejiang.com.tw/og-logo.png' }
       ],  
       link: [
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
   schemaOrg: {
     identity: {
       type: 'Organization',
-      name: 'JieJiang | 捷匠專業汽車美容 - 淡水・竹圍・北投 | 洗車・鍍膜・包膜・打蠟',
+      name: 'JieJiang | 捷匠專業汽車美容 - 淡水・三重・北投 | 洗車・鍍膜・包膜・打蠟',
       url: 'https://jiejiang.com.tw/',
       logo: 'https://jiejiang.com.tw/og-logo.png'
     }
