@@ -1,12 +1,9 @@
 <template>
   <div>
     <!-- Line Icon with "點我預約" text -->
-    <div  class="reservation-container" @click="togglePopup">
-      <a
-        class="nav-link d-flex align-items-center justify-content-center"
-        href="javascript:void(0);"
-        aria-label="前往Line連結"
-      >
+    <div class="reservation-container">
+      <a class="nav-link d-flex align-items-center justify-content-center" href="https://line.me/R/ti/p/@639xmqad"
+        aria-label="前往Line連結">
         <!-- <Icon
           name="ri:line-fill"
           class="social-icon line-icon"
@@ -17,6 +14,8 @@
       </a>
     </div>
 
+
+
     <!-- Popup Dialog -->
     <div v-if="showPopup" class="popup-overlay" @click="togglePopup">
       <div class="popup-dialog" @click.stop>
@@ -24,19 +23,13 @@
           <button type="button" class="btn-close" @click="togglePopup" aria-label="Close"></button>
           <h5 class="text-center mb-3">立即使用LINE預約</h5>
           <div class="list-group">
-            <a 
-              href="https://line.me/R/ti/p/@639xmqad" 
-              target="_blank" 
-              class="list-group-item list-group-item-action d-flex align-items-center"
-            >
+            <a href="https://line.me/R/ti/p/@639xmqad" target="_blank"
+              class="list-group-item list-group-item-action d-flex align-items-center">
               <Icon name="ri:line-fill" class="me-2" style="font-size: 24px; color: #00c300;"></Icon>
               捷匠 - 官方LINE
             </a>
-            <a 
-              href="https://line.me/R/ti/p/@rb_33" 
-              target="_blank" 
-              class="list-group-item list-group-item-action d-flex align-items-center"
-            >
+            <a href="https://line.me/R/ti/p/@rb_33" target="_blank"
+              class="list-group-item list-group-item-action d-flex align-items-center">
               <Icon name="ri:line-fill" class="me-2" style="font-size: 24px; color: #00c300;"></Icon>
               捷匠 - 包膜部門
             </a>
@@ -59,12 +52,19 @@ function togglePopup() {
 
 <style scoped>
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: translateY(-10px);
   }
@@ -74,9 +74,11 @@ function togglePopup() {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -86,9 +88,11 @@ function togglePopup() {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -106,7 +110,7 @@ function togglePopup() {
 
 .line-icon {
   width: 70px;
-  height: 70px; 
+  height: 70px;
   border-radius: 50%;
   background: linear-gradient(45deg, #00c300, #00e600);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
