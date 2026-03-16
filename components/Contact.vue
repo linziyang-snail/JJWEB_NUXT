@@ -71,17 +71,17 @@ const offices = ref([
       { name: 'Instagram', icon: 'ri:instagram-line', url: 'https://www.instagram.com/jiejiang_autodetailing/' }
     ],
   },
-  {
-    title: '捷匠專業汽車美容-三重店',
-    address: '新北市三重區安慶街277號1樓',
-    googleMapLink: 'https://www.google.com/maps/search/?api=1&query=新北市三重區安慶街277號1樓',
-    contactNumbers: ['02-2808-7831'],
-    emailAddress: 'dlive0829@gmail.com',
-    socialLinks: [
-      { name: 'Facebook', icon: 'ri:facebook-fill', url: 'https://www.facebook.com/profile.php?id=61575932133602' },
-      { name: 'Instagram', icon: 'ri:instagram-line', url: 'https://www.instagram.com/jiejiang_sanchong/' }
-    ],
-  },
+  // {
+  //   title: '捷匠專業汽車美容-三重店',
+  //   address: '新北市三重區安慶街277號1樓',
+  //   googleMapLink: 'https://www.google.com/maps/search/?api=1&query=新北市三重區安慶街277號1樓',
+  //   contactNumbers: ['02-2808-7831'],
+  //   emailAddress: 'dlive0829@gmail.com',
+  //   socialLinks: [
+  //     { name: 'Facebook', icon: 'ri:facebook-fill', url: 'https://www.facebook.com/profile.php?id=61575932133602' },
+  //     { name: 'Instagram', icon: 'ri:instagram-line', url: 'https://www.instagram.com/jiejiang_sanchong/' }
+  //   ],
+  // },
   {
     title: '捷匠專業汽車美容-北投店',
     address: '台北市北投區中央南路二段33號',
